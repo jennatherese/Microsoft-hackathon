@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { Terminal, Download, AlertCircle, MessageSquare } from 'lucide-react';
-import WorkflowObituary from './WorkflowObituary';
 import { MemoryReport } from './AdaptiveMemory';
 
 export default function AuditTrail({ log, tasks = [] }) {
@@ -129,15 +128,6 @@ export default function AuditTrail({ log, tasks = [] }) {
           </div>
         ))}
         
-        {hasAuditorCompleted && escalatedTasks.length > 0 && escalatedTasks.map((task, idx) => (
-          <WorkflowObituary 
-            key={`obituary-${idx}`}
-            task={task}
-            runDate="Sept 12, 2025"
-            attempt1Time="14:23:15"
-            attempt2Time="14:28:42"
-          />
-        ))}
         
         <MemoryReport 
           tasks={allTasks}
