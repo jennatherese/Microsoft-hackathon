@@ -3,23 +3,24 @@ __pycache__/
 *.py[cod]
 *.pyo
 *.pyc
-.env
 *.egg-info/
 dist/
 build/
 .venv/
 venv/
 
-# Node
-node_modules/
-frontend/dist/
-frontend/.vite/
-
-# Credentials & tokens (sensitive - do not commit)
+# Env & secrets — NEVER commit these
+.env
+backend/.env
 backend/token.json
 backend/credentials.json
 token.json
 credentials.json
+
+# Node
+node_modules/
+frontend/dist/
+frontend/.vite/
 
 # OS
 .DS_Store
