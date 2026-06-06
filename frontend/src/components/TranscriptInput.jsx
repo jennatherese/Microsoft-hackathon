@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { Play } from 'lucide-react';
-import WorkflowRiskScore from './WorkflowRiskScore';
 import { AdaptiveMemoryPanel } from './AdaptiveMemory';
 
 const DEFAULT_TRANSCRIPT = `Q3 Planning Meeting — Sept 12, 2025
@@ -39,7 +38,6 @@ export default function TranscriptInput({ onStart, disabled }) {
       
       <AdaptiveMemoryPanel />
       
-      <WorkflowRiskScore transcript={transcript} />
       
       <button
         onClick={() => onStart(transcript)}
